@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RedBall : Ball
+public class BlackBall : Ball
 {
     [SerializeField] private float initialForce;
     [SerializeField] private int score;

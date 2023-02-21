@@ -4,14 +4,14 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    public void DestroyBall()
+    public void BallCatched(int scoreToAdd)
     {
+        GameManager.Instance.UpdateScore(scoreToAdd);
         Destroy(gameObject);
     }
 
-    public virtual void SetSize(float size)
+    public void SetInitialSpeed(float initialForce)
     {
-        transform.localScale *= size;
+        gameObject.GetComponent<Rigidbody>().AddForce(Vector3.down * initialForce, ForceMode.Impulse);
     }
-
 }
