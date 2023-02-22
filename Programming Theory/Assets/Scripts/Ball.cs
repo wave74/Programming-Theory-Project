@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
+    private int test;
     public void BallCatched(int scoreToAdd)
     {
         GameManager.Instance.UpdateScore(scoreToAdd);
